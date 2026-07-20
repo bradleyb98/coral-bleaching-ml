@@ -72,7 +72,7 @@ Random Forest and SVM disagree on the top feature: RF's mean-decrease-in-impurit
 
 **XGBoost.** It has the best test accuracy, the best recall on the minority alert classes — the cases that matter most for an early-warning system, where missing an Alert-Level event is the costly failure mode — and a smaller train–test gap than Random Forest despite similar model complexity. SVM is the most stable of the three and would be a reasonable choice if interpretability and low variance mattered more than catching rare events, but its weak recall on Classes 1 and 3 is a real liability here.
 
-That said, the honest caveat: because `Bleaching_Alert_Area` is a deterministic threshold function of `HotSpots` and `DHW`, a simple rule-based classifier applying those same thresholds directly would almost certainly outperform all three ML models here while being fully interpretable and auditable. This project is a modeling exercise for comparing classifier behavior, not a claim that ML is the right tool for a target that's already rule-derived — in a real deployment I'd reach for the threshold logic first and reserve ML for cases where the labeling rule isn't already known.
+That said, the honest caveat: because `Bleaching_Alert_Area` is a deterministic threshold function of `HotSpots` and `DHW`, a simple rule-based classifier applying those same thresholds directly would almost certainly outperform all three ML models here while being fully interpretable. This project is a modeling exercise for comparing classifier behavior, not a claim that ML is the right tool for a target that's already rule-derived — in a real deployment I'd reach for the threshold logic first and reserve ML for cases where the labeling rule isn't already known.
 
 ### Limitations
 
